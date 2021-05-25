@@ -33,6 +33,7 @@ def image():
 	Image.fromarray(dst).save("midout.png")
 	with open("midout.png", "rb") as image_file:
 		encoded = b64encode(image_file.read())
+	
 
 	encoded_string = 'data:image/png;base64,{}'.format(encoded.decode())
 
